@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Assistenza Informatica Roma Est | Riparazione PC e Recupero Dati — AM Technology</title>
+<meta name="description" content="AM Technology: riparazione computer, recupero dati, rimozione virus e assistenza IT per privati e aziende a Roma Est. Diagnosi gratuita, preventivo trasparente, garanzia sull'intervento. Via Edoardo D'Onofrio 154 — tel. 06 4050 1519.">
+<meta name="keywords" content="assistenza informatica Roma Est, riparazione computer Roma, recupero dati Roma, rimozione virus, assistenza IT aziende Roma, reti aziendali, backup dati">
+<meta name="theme-color" content="#05070d">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:site_name" content="AM Technology">
+<meta property="og:title" content="Assistenza Informatica Roma Est | AM Technology">
+<meta property="og:description" content="Riparazione computer, recupero dati e assistenza IT per privati e aziende a Roma Est. Diagnosi gratuita e garanzia sull'intervento.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2305070d'/%3E%3Cpath d='M18 46 32 18l14 28' stroke='%2322d3ee' stroke-width='6' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg1:#05070d; --bg2:#080d1a; --bg3:#0b1326;
+  --line:rgba(120,170,255,.14); --line-cy:rgba(34,211,238,.16); --line-str:rgba(34,211,238,.55);
+  --cyan:#22d3ee; --cyan2:#38bdf8; --blue:#4f7cff; --violet:#7c6bff;
+  --text:#e8f0fb; --muted:#93a7c9; --ok:#34d399;
+  --r-sm:12px; --r-md:18px; --r-lg:22px; --r-xl:30px;
+  --gap:20px; --pad-x:24px; --sec-y:92px;
+  --ease:cubic-bezier(.2,.7,.3,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:
+    radial-gradient(1100px 520px at 50% -180px, rgba(34,211,238,.07), transparent 62%),
+    radial-gradient(900px 480px at 88% 16%, rgba(79,124,255,.06), transparent 60%),
+    var(--bg1);
+  color:var(--text);
+  font-family:system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.65;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility
+}
+img,svg{display:block;max-width:100%}
+a{color:var(--cyan);text-decoration:none}
+h1,h2,h3,h4{line-height:1.18;letter-spacing:-.02em;text-wrap:balance}
+::selection{background:rgba(34,211,238,.85);color:#04121a}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:6px}
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-track{background:var(--bg1)}
+::-webkit-scrollbar-thumb{background:#16233f;border-radius:8px;border:2px solid var(--bg1)}
+::-webkit-scrollbar-thumb:hover{background:#1d2c4d}
+.container{width:100%;max-width:1180px;margin:0 auto;padding-left:var(--pad-x);padding-right:var(--pad-x)}
+.glass{
+  background:linear-gradient(180deg,rgba(19,30,58,.66),rgba(9,15,31,.6));
+  border:1px solid var(--line-cy);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  box-shadow:inset 0 1px 0 rgba(148,190,255,.08),0 18px 44px rgba(2,6,16,.55)
+}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+/* ---- cinematic atmosphere: ambient glows, grid, vignette, film grain ---- */
+.ambient{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden;contain:strict}
+.ambient span{position:absolute;border-radius:50%;filter:blur(110px);will-change:transform}
+.ambient .g1{width:560px;height:560px;background:radial-gradient(circle,rgba(34,211,238,.20),transparent 68%);top:-220px;left:-160px;animation:drift1 24s ease-in-out infinite alternate}
+.ambient .g2{width:500px;height:500px;background:radial-gradient(circle,rgba(79,124,255,.22),transparent 68%);bottom:-200px;right:-140px;animation:drift2 28s ease-in-out infinite alternate}
+.ambient .g3{width:420px;height:420px;background:radial-gradient(circle,rgba(124,107,255,.13),transparent 70%);top:38%;left:58%;animation:drift1 32s ease-in-out infinite alternate-reverse}
+@keyframes drift1{to{transform:translate(60px,40px) scale(1.08)}}
+@keyframes drift2{to{transform:translate(-50px,-30px) scale(1.1)}}
+.grid-lines{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.28;
+  background-image:linear-gradient(rgba(110,160,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(110,160,255,.08) 1px,transparent 1px);
+  background-size:60px 60px;
+  -webkit-mask-image:radial-gradient(ellipse 75% 60% at 50% 0%,#000 15%,transparent 78%);
+  mask-image:radial-gradient(ellipse 75% 60% at 50% 0%,#000 15%,transparent 78%)}
+.vignette{position:fixed;inset:0;z-index:2;pointer-events:none;
+  background:radial-gradient(ellipse 120% 92% at 50% 40%,transparent 58%,rgba(0,0,0,.42) 100%)}
+.grain{position:fixed;inset:0;z-index:3;pointer-events:none;opacity:.05;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size:240px 240px}
+.wrap{position:relative;z-index:1}
+
+/* nav */
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--cyan);color:#04121a;padding:10px 16px;border-radius:0 0 var(--r-sm) 0;font-weight:700}
+.skip:focus{left:0}
+nav{position:sticky;top:0;z-index:50;background:rgba(4,7,13,.72);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid rgba(34,211,238,.14);box-shadow:0 1px 0 rgba(0,0,0,.45)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:13px 0}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:17px;color:var(--text);letter-spacing:-.01em}
+.logo-mark{width:36px;height:36px;flex:0 0 36px;border-radius:11px;background:linear-gradient(135deg,var(--cyan),var(--blue));display:grid;place-items:center;box-shadow:0 0 22px rgba(56,189,248,.45),inset 0 1px 0 rgba(255,255,255,.35)}
+.logo-mark svg{width:20px;height:20px;stroke:#04121a;stroke-width:2.6}
+.nav-links{display:flex;gap:30px;font-size:14.5px;font-weight:500}
+.nav-links a{color:var(--muted);transition:color .2s var(--ease);position:relative;padding:4px 0}
+.nav-links a::after{content:'';position:absolute;left:0;right:100%;bottom:0;height:1.5px;background:linear-gradient(90deg,var(--cyan),var(--blue));box-shadow:0 0 8px rgba(34,211,238,.8);transition:right .25s var(--ease)}
+.nav-links a:hover{color:var(--cyan)}
+.nav-links a:hover::after{right:0}
+.nav-actions{display:flex;align-items:center;gap:10px}
+.burger{display:none;width:42px;height:42px;border-radius:var(--r-sm);background:transparent;border:1px solid var(--line);color:var(--cyan);align-items:center;justify-content:center;cursor:pointer;transition:border-color .2s var(--ease),background .2s var(--ease)}
+.burger:hover{border-color:var(--line-str);background:rgba(56,189,248,.08)}
+.burger svg{width:20px;height:20px;stroke:currentColor;stroke-width:2}
+.burger .x{display:none}
+.burger[aria-expanded="true"] .m{display:none}
+.burger[aria-expanded="true"] .x{display:block}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 22px;border-radius:var(--r-sm);font-weight:600;font-size:14.5px;cursor:pointer;border:1px solid transparent;transition:transform .16s var(--ease),box-shadow .25s var(--ease),border-color .2s var(--ease),background .2s var(--ease);will-change:transform}
+.btn svg{width:17px;height:17px;stroke:currentColor;stroke-width:2;flex:0 0 17px}
+.btn-cta{position:relative;overflow:hidden;background:linear-gradient(135deg,#22d3ee,#3b82f6 55%,#4f7cff);color:#04121a;box-shadow:0 0 0 1px rgba(34,211,238,.35),0 10px 30px rgba(34,211,238,.32),0 4px 14px rgba(79,124,255,.4)}
+.btn-cta::after{content:'';position:absolute;top:0;left:-80%;width:50%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);transition:left .6s var(--ease)}
+.btn-cta:hover{transform:translateY(-2px);box-shadow:0 0 0 1px rgba(34,211,238,.6),0 0 42px rgba(34,211,238,.5),0 18px 44px rgba(34,211,238,.4)}
+.btn-cta:hover::after{left:130%}
+.btn-cta:active{transform:translateY(0) scale(.98);box-shadow:0 0 0 1px rgba(34,211,238,.4),0 4px 14px rgba(34,211,238,.35)}
+.btn-ghost{background:rgba(255,255,255,.02);color:var(--cyan);border-color:var(--line)}
+.btn-ghost:hover{border-color:var(--line-str);background:rgba(56,189,248,.08);box-shadow:0 0 24px rgba(34,211,238,.18);transform:translateY(-2px)}
+.btn-ghost:active{transform:translateY(0) scale(.98)}
+.btn-sm{padding:10px 16px;font-size:13.5px}
+
+/* hero — full-bleed cinematic */
+.hero{padding:110px 0 92px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;left:50%;transform:translateX(-50%);bottom:0;width:120%;height:2px;background:linear-gradient(90deg,transparent,rgba(34,211,238,.55),rgba(79,124,255,.5),transparent);filter:blur(1px);opacity:.8;pointer-events:none}
+.hero::after{content:'';position:absolute;top:-160px;left:50%;transform:translateX(-50%);width:920px;height:440px;background:radial-gradient(ellipse,rgba(34,211,238,.13),transparent 65%);pointer-events:none}
+.hero-glow{position:absolute;inset:0;pointer-events:none}
+.hero-glow::before{content:'';position:absolute;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(34,211,238,.16),transparent 65%);top:-120px;right:6%;filter:blur(40px)}
+.hero-glow::after{content:'';position:absolute;width:640px;height:300px;border-radius:50%;background:radial-gradient(ellipse,rgba(79,124,255,.15),transparent 65%);bottom:-120px;left:-160px;filter:blur(50px)}
+.lightbar{position:absolute;top:0;left:-25%;width:40%;height:1px;background:linear-gradient(90deg,transparent,rgba(34,211,238,.9),transparent);opacity:.5;animation:sweep 9s ease-in-out infinite;pointer-events:none}
+@keyframes sweep{0%,100%{left:-25%}50%{left:85%}}
+.badge{display:inline-flex;align-items:center;gap:9px;padding:7px 15px;border-radius:999px;background:rgba(34,211,238,.08);border:1px solid rgba(34,211,238,.35);color:var(--cyan);font-size:12.5px;font-weight:600;margin-bottom:24px;letter-spacing:.01em;box-shadow:0 0 20px rgba(34,211,238,.08)}
+.badge .dot{width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 12px var(--cyan);animation:pulse 2.6s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.hero h1{font-size:clamp(33px,5.2vw,56px);font-weight:800;max-width:17ch;background:linear-gradient(175deg,#fff 25%,var(--cyan2));-webkit-background-clip:text;background-clip:text;color:transparent;padding-bottom:.08em;filter:drop-shadow(0 0 24px rgba(56,189,248,.2))}
+.hero p.sub{font-size:clamp(16px,2vw,18.5px);color:var(--muted);max-width:58ch;margin:20px 0 32px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero-note{margin-top:18px;font-size:13.5px;color:var(--muted);display:flex;align-items:center;gap:8px}
+.hero-note svg{width:15px;height:15px;stroke:var(--ok);stroke-width:2.2;flex:0 0 15px}
+.hero-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin-top:56px}
+.stat{padding:20px 22px;border-radius:var(--r-md);transition:transform .25s var(--ease),border-color .25s var(--ease),box-shadow .25s var(--ease)}
+.stat:hover{transform:translateY(-3px);border-color:var(--line-str);box-shadow:0 0 0 1px rgba(34,211,238,.2),0 0 32px rgba(34,211,238,.13),0 22px 50px rgba(2,6,16,.6)}
+.stat .num{font-size:clamp(26px,3.4vw,31px);font-weight:800;color:var(--cyan);letter-spacing:-.03em;line-height:1.1;text-shadow:0 0 22px rgba(34,211,238,.35)}
+.stat .lbl{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.45}
+
+/* sections — dark dividers between panels */
+section{position:relative;padding:var(--sec-y) 0;scroll-margin-top:76px}
+section::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:min(760px,86%);height:1px;background:linear-gradient(90deg,transparent,rgba(34,211,238,.4),transparent);opacity:.4;pointer-events:none}
+.sec-head{text-align:center;max-width:660px;margin:0 auto 52px}
+.eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);margin-bottom:12px;text-shadow:0 0 16px rgba(34,211,238,.4)}
+.sec-head h2{font-size:clamp(26px,4vw,40px);font-weight:800;margin-bottom:14px}
+.sec-head p{color:var(--muted);font-size:16px}
+
+/* services */
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(275px,1fr));gap:var(--gap)}
+.svc{padding:30px 28px;border-radius:var(--r-lg);transition:transform .25s var(--ease),border-color .25s var(--ease),background .25s var(--ease),box-shadow .25s var(--ease);position:relative;overflow:hidden}
+.svc::after{content:'';position:absolute;inset:0;border-radius:inherit;background:radial-gradient(420px circle at 50% -10%,rgba(56,189,248,.16),transparent 65%);opacity:0;transition:opacity .3s var(--ease);pointer-events:none}
+.svc:hover{transform:translateY(-5px);border-color:var(--line-str);box-shadow:0 0 0 1px rgba(34,211,238,.22),0 0 36px rgba(34,211,238,.15),0 24px 56px rgba(2,6,16,.65)}
+.svc:hover::after{opacity:1}
+.svc .ico{width:52px;height:52px;border-radius:15px;display:grid;place-items:center;margin-bottom:18px;background:linear-gradient(135deg,rgba(34,211,238,.22),rgba(79,124,255,.18));border:1px solid rgba(34,211,238,.28);color:var(--cyan);box-shadow:inset 0 1px 0 rgba(255,255,255,.09),0 0 22px rgba(34,211,238,.12);transition:box-shadow .25s var(--ease)}
+.svc:hover .ico{box-shadow:inset 0 1px 0 rgba(255,255,255,.09),0 0 32px rgba(34,211,238,.35)}
+.svc .ico svg{width:25px;height:25px;stroke:currentColor;stroke-width:1.6;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.svc h3{font-size:18.5px;margin-bottom:10px;font-weight:700}
+.svc p{font-size:14.5px;color:var(--muted)}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:16px;counter-reset:step}
+.step{padding:28px 26px;border-radius:var(--r-md);position:relative;transition:transform .25s var(--ease),border-color .25s var(--ease),box-shadow .25s var(--ease)}
+.step:hover{transform:translateY(-3px);border-color:var(--line-str);box-shadow:0 0 0 1px rgba(34,211,238,.2),0 0 30px rgba(34,211,238,.13),0 20px 46px rgba(2,6,16,.6)}
+.step::before{counter-increment:step;content:counter(step,decimal-leading-zero);position:absolute;top:16px;right:22px;font-size:36px;font-weight:800;color:rgba(34,211,238,.2);letter-spacing:-.04em;text-shadow:0 0 18px rgba(34,211,238,.25)}
+.step h3{font-size:16.5px;margin-bottom:8px;color:#fff;max-width:11ch}
+.step p{font-size:14px;color:var(--muted)}
+
+/* why */
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+@media(min-width:900px){.why-grid{grid-template-columns:repeat(3,1fr)}}
+.why{padding:26px 24px;border-radius:var(--r-md);transition:transform .25s var(--ease),border-color .25s var(--ease),box-shadow .25s var(--ease)}
+.why:hover{transform:translateY(-3px);border-color:var(--line-str);box-shadow:0 0 0 1px rgba(34,211,238,.2),0 0 30px rgba(34,211,238,.13),0 20px 46px rgba(2,6,16,.6)}
+.why h3{font-size:15.5px;font-weight:700;color:var(--cyan);margin-bottom:9px;display:flex;align-items:center;gap:9px}
+.why h3 svg{width:17px;height:17px;stroke:currentColor;stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round;flex:0 0 17px}
+.why p{font-size:14px;color:var(--muted)}
+
+/* faq */
+.faq{max-width:820px;margin:0 auto;display:grid;gap:12px}
+.faq details{border-radius:var(--r-md);padding:0 24px;transition:border-color .25s var(--ease),box-shadow .25s var(--ease)}
+.faq details[open],.faq details:hover{border-color:var(--line-str);box-shadow:0 0 0 1px rgba(34,211,238,.16),0 0 28px rgba(34,211,238,.1)}
+.faq summary{list-style:none;cursor:pointer;padding:20px 0;font-weight:600;font-size:16px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .chev{width:18px;height:18px;flex:0 0 18px;stroke:var(--cyan);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;transition:transform .28s var(--ease)}
+.faq details[open] summary .chev{transform:rotate(180deg)}
+.faq .ans{overflow:hidden;display:grid;grid-template-rows:0fr;transition:grid-template-rows .3s var(--ease)}
+.faq details[open] .ans{grid-template-rows:1fr}
+.faq .ans>div{min-height:0}
+.faq .ans p{color:var(--muted);font-size:14.5px;padding-bottom:22px}
+
+/* cta */
+.cta-section{padding:var(--sec-y) 0 96px;scroll-margin-top:76px}
+.cta-box{padding:56px 48px;border-radius:var(--r-xl);text-align:center;background:linear-gradient(150deg,rgba(20,32,62,.85),rgba(8,13,27,.92));border:1px solid rgba(34,211,238,.22);position:relative;overflow:hidden;box-shadow:inset 0 1px 0 rgba(148,190,255,.1),0 0 60px rgba(34,211,238,.07),0 30px 70px rgba(2,6,16,.7)}
+.cta-box::before{content:'';position:absolute;top:-50%;left:50%;transform:translateX(-50%);width:640px;height:340px;background:radial-gradient(ellipse,rgba(56,189,248,.18),transparent 70%);pointer-events:none}
+.cta-box::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 130%,rgba(79,124,255,.16),transparent 60%);pointer-events:none}
+.cta-box>*{position:relative}
+.cta-box h2{font-size:clamp(26px,4vw,38px);margin-bottom:14px;font-weight:800}
+.cta-box p{color:var(--muted);max-width:52ch;margin:0 auto 30px}
+.cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.zone{margin-top:28px;font-size:13px;color:var(--muted);max-width:60ch;margin-left:auto;margin-right:auto}
+
+/* footer */
+footer{border-top:1px solid rgba(34,211,238,.12);padding:48px 0 36px;background:var(--bg2);position:relative;z-index:1}
+footer::before{content:'';position:absolute;top:-1px;left:50%;transform:translateX(-50%);width:min(640px,80%);height:1px;background:linear-gradient(90deg,transparent,rgba(34,211,238,.35),transparent)}
+.foot{display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap;align-items:center}
+.contact-row{display:flex;gap:14px 28px;flex-wrap:wrap;align-items:center;font-size:14.5px}
+.contact-row a{display:inline-flex;align-items:center;gap:9px;color:var(--muted);transition:color .2s var(--ease)}
+.contact-row a:hover{color:var(--cyan)}
+.contact-row svg{width:16px;height:16px;stroke:var(--cyan);stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round;flex:0 0 16px}
+.copy{text-align:center;color:var(--muted);font-size:12.5px;margin-top:26px;padding-top:22px;border-top:1px solid var(--line)}
+
+/* reveal (gated on .js so page is visible if JS fails) */
+.js .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.js .reveal.in{opacity:1;transform:none}
+
+@media(max-width:820px){
+  :root{--sec-y:64px}
+  .hero{padding:64px 0 56px}
+  .nav-links{order:3;flex-basis:100%;flex-direction:column;gap:0;max-height:0;overflow:hidden;transition:max-height .3s var(--ease)}
+  .nav-links.open{max-height:260px}
+  .nav-links a{padding:13px 2px;border-bottom:1px solid var(--line);font-size:15.5px}
+  .nav-links a::after{display:none}
+  .nav-links a:last-child{border-bottom:none}
+  .burger{display:inline-flex}
+  .cta-box{padding:40px 24px}
+  .hero-stats{margin-top:44px}
+}
+@media(max-width:520px){
+  :root{--pad-x:18px;--gap:14px}
+  .logo{font-size:16px}
+  .cta-label{display:none}
+  .nav-actions .btn-sm{padding:11px 13px}
+  .nav-actions{gap:8px}
+  .hero-stats{grid-template-columns:repeat(2,1fr);gap:12px}
+  .stat{padding:16px 15px}
+  .btn{width:100%}
+  .nav-actions .btn{width:auto}
+  .hero-actions,.cta-actions{flex-direction:column;align-items:stretch}
+  .contact-row{gap:12px;flex-direction:column;align-items:flex-start}
+  .foot{justify-content:center}
+  .svc,.step,.why{padding:22px 20px}
+  .faq details{padding:0 18px}
+  .cta-box{padding:34px 20px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+</style>
+<script>if(!window.matchMedia||!matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('js')}</script>
+</head>
+<body>
+<a class="skip" href="#main">Vai al contenuto</a>
+<div class="ambient" aria-hidden="true"><span class="g1"></span><span class="g2"></span><span class="g3"></span></div>
+<div class="grid-lines" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="wrap">
+
+<nav aria-label="Navigazione principale">
+  <div class="container nav-inner">
+    <a class="logo" href="#top" aria-label="AM Technology — torna all'inizio">
+      <span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19 12 5l8 14"/><path d="M8.5 14h7"/></svg></span>
+      AM Technology
+    </a>
+    <div class="nav-links" id="nav-links">
+      <a href="#servizi">Servizi</a>
+      <a href="#processo">Processo</a>
+      <a href="#perche">Perché noi</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contatti">Contatti</a>
+    </div>
+    <div class="nav-actions">
+      <a class="btn btn-cta btn-sm" href="tel:+390640501519" aria-label="Chiama AM Technology al +39 06 4050 1519">
+        <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+        <span class="cta-label">Chiama ora</span>
+      </a>
+      <button class="burger" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="nav-links">
+        <svg class="m" viewBox="0 0 24 24" fill="none" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="x" viewBox="0 0 24 24" fill="none" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<main id="main">
+<header class="hero" id="top">
+  <div class="lightbar" aria-hidden="true"></div>
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="container">
+    <span class="badge"><span class="dot" aria-hidden="true"></span> Assistenza IT professionale — Roma Est</span>
+    <h1>Il tuo computer torna a lavorare come nuovo.</h1>
+    <p class="sub">Riparazione hardware e software, recupero dati e manutenzione IT per privati e aziende. Diagnosi rapida e preventivi trasparenti, senza sorprese.</p>
+    <div class="hero-actions">
+      <a class="btn btn-cta" href="tel:+390640501519">
+        <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+        +39 06 4050 1519
+      </a>
+      <a class="btn btn-ghost" href="#servizi">Scopri i servizi</a>
+    </div>
+    <p class="hero-note">
+      <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>
+      Diagnosi gratuita e preventivo prima di ogni intervento.
+    </p>
+    <div class="hero-stats">
+      <div class="stat glass"><div class="num">+15</div><div class="lbl">anni di esperienza</div></div>
+      <div class="stat glass"><div class="num">1000+</div><div class="lbl">dispositivi riparati</div></div>
+      <div class="stat glass"><div class="num">24h</div><div class="lbl">tempo medio riparazione</div></div>
+      <div class="stat glass"><div class="num">100%</div><div class="lbl">garanzia sull'intervento</div></div>
+    </div>
+  </div>
+</header>
+
+<section id="servizi" aria-labelledby="h-servizi">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Servizi</p>
+      <h2 id="h-servizi">Soluzioni complete per il tuo business</h2>
+      <p>Dalla riparazione rapida al sistema IT gestito, copriamo ogni esigenza tecnologica.</p>
+    </div>
+    <div class="services">
+      <article class="svc glass reveal">
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0 5.3 5.3l-8 8a2.8 2.8 0 0 1-4-4l8-8Z"/><path d="M14.7 6.3 17.5 3.5"/><path d="M6 18h.01"/></svg></div>
+        <h3>Riparazione Hardware</h3>
+        <p>Sostituzione schede madri, schermi, batterie e tastiere. Componenti originali o ricondizionati, sempre con garanzia.</p>
+      </article>
+      <article class="svc glass reveal">
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5.5" rx="8" ry="3"/><path d="M4 5.5v13c0 1.7 3.6 3 8 3s8-1.3 8-3v-13"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></div>
+        <h3>Recupero Dati</h3>
+        <p>Recuperiamo file da hard disk rotti, SSD e memorie USB danneggiate. Priorità assoluta a documenti e fotografie.</p>
+      </article>
+      <article class="svc glass reveal">
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v2m0 14v2M3 12h2m14 0h2M5.6 5.6l1.4 1.4m10 10 1.4 1.4m0-12.8-1.4 1.4m-10 10-1.4 1.4"/><circle cx="12" cy="12" r="3.5"/></svg></div>
+        <h3>Ottimizzazione Software</h3>
+        <p>Rimozione di virus e malware, pulizia del sistema, aggiornamenti e messa a punto dei PC diventati lenti.</p>
+      </article>
+      <article class="svc glass reveal">
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="6" rx="2"/><rect x="3" y="14" width="18" height="6" rx="2"/><path d="M7 7h.01M7 17h.01"/></svg></div>
+        <h3>Assistenza Aziendale</h3>
+        <p>Contratti di manutenzione IT, gestione di server, reti e postazioni di lavoro per studi professionali e PMI.</p>
+      </article>
+      <article class="svc glass reveal">
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5a10 10 0 0 1 14 0"/><path d="M8.5 15.8a5.5 5.5 0 0 1 7 0"/><path d="M2 9.2a15 15 0 0 1 20 0"/><path d="M12 19.5h.01"/></svg></div>
+        <h3>Reti &amp; Connettività</h3>
+        <p>Installazione e configurazione di router, reti Wi-Fi, NAS e condivisione file tra le postazioni dell'ufficio.</p>
+      </article>
+      <article class="svc glass reveal">
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2.5 4.5 6v6c0 4.6 3.2 8.4 7.5 9.5 4.3-1.1 7.5-4.9 7.5-9.5V6L12 2.5Z"/><path d="m9 12 2.2 2.2L15.5 10"/></svg></div>
+        <h3>Sicurezza e Backup</h3>
+        <p>Protezione dei dati, backup automatizzati e piani di continuità operativa per non fermare mai la tua azienda.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="processo" style="background:var(--bg2)" aria-labelledby="h-processo">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Processo</p>
+      <h2 id="h-processo">Come lavoriamo</h2>
+      <p>Un percorso semplice e trasparente, dalla chiamata alla consegna.</p>
+    </div>
+    <div class="steps">
+      <div class="step glass reveal"><h3>Chiama o scrivici</h3><p>Descrivi il problema al telefono: ti indirizziamo subito.</p></div>
+      <div class="step glass reveal"><h3>Diagnosi gratuita</h3><p>Analizziamo il dispositivo e ti spieghiamo il preventivo.</p></div>
+      <div class="step glass reveal"><h3>Riparazione</h3><p>Interveniamo in laboratorio o sul posto, con aggiornamenti costanti.</p></div>
+      <div class="step glass reveal"><h3>Consegna garantita</h3><p>Test completo e garanzia sull'intervento eseguito.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="perche" aria-labelledby="h-perche">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Perché noi</p>
+      <h2 id="h-perche">Affidabilità e competenza senza compromessi</h2>
+      <p>Tecnici qualificati, ricambi certificati e un rapporto diretto con il cliente.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why glass reveal"><h3><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v20M17 5.5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Prezzi trasparenti</h3><p>Preventivo chiaro prima di iniziare. Nessun costo nascosto in fattura.</p></div>
+      <div class="why glass reveal"><h3><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5 4.5 6v6c0 4.6 3.2 8.4 7.5 9.5 4.3-1.1 7.5-4.9 7.5-9.5V6L12 2.5Z"/></svg>Ricambi di qualità</h3><p>Componenti originali o equivalenti certificati, con garanzia scritta.</p></div>
+      <div class="why glass reveal"><h3><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>Tempi rapidi</h3><p>La maggior parte delle riparazioni è pronta entro 24 ore lavorative.</p></div>
+      <div class="why glass reveal"><h3><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11"/><path d="M9.5 20v-6h5v6"/></svg>Ci occupiamo di tutto</h3><p>Dal singolo PC di casa all'infrastruttura aziendale completa.</p></div>
+      <div class="why glass reveal"><h3><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 11-8 11s-8-5-8-11a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="2.6"/></svg>Assistenza sul posto</h3><p>Interveniamo direttamente presso la tua abitazione o la tua sede a Roma.</p></div>
+      <div class="why glass reveal"><h3><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10.5" width="16" height="10" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/></svg>Dati al sicuro</h3><p>Rispetto della privacy e trattamento riservato di ogni tuo file.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="background:var(--bg2)" aria-labelledby="h-faq">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Domande frequenti</p>
+      <h2 id="h-faq">Le risposte che cerchi</h2>
+      <p>Le domande che ci fanno più spesso al telefono, con risposte chiare.</p>
+    </div>
+    <div class="faq reveal">
+      <details class="glass">
+        <summary>Quanto costa la diagnosi del computer?<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="ans"><div><p>La diagnosi è gratuita. Analizziamo il dispositivo, individuiamo il guasto e ti presentiamo un preventivo dettagliato: decidi tu se procedere, senza alcun impegno.</p></div></div>
+      </details>
+      <details class="glass">
+        <summary>In quanto tempo riparate un PC o un notebook?<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="ans"><div><p>La maggior parte degli interventi si conclude entro 24 ore lavorative. Se serve ordinare un ricambio specifico ti comunichiamo subito la data prevista di consegna.</p></div></div>
+      </details>
+      <details class="glass">
+        <summary>Riuscite a recuperare i dati da un hard disk rotto?<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="ans"><div><p>Nella maggior parte dei casi sì: recuperiamo dati da hard disk, SSD, memorie USB e schede SD danneggiate. Importante: non riaccendere il dispositivo e portacelo il prima possibile, per aumentare le probabilità di successo.</p></div></div>
+      </details>
+      <details class="glass">
+        <summary>Lavorate anche con le aziende?<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="ans"><div><p>Sì. Seguiamo studi professionali e PMI con contratti di manutenzione IT, gestione di reti e server, backup automatizzati e assistenza sulle postazioni di lavoro.</p></div></div>
+      </details>
+      <details class="glass">
+        <summary>Venite anche a domicilio o in ufficio?<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="ans"><div><p>Sì, effettuiamo assistenza on-site nella zona di Roma Est per configurazioni di rete, installazioni e interventi che non richiedono il laboratorio. Chiamaci per verificare la disponibilità.</p></div></div>
+      </details>
+      <details class="glass">
+        <summary>L'intervento è coperto da garanzia?<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="ans"><div><p>Ogni riparazione è garantita, così come i ricambi installati. Prima della riconsegna eseguiamo un test completo del dispositivo per verificare che tutto funzioni correttamente.</p></div></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section id="contatti" class="cta-section" aria-labelledby="h-contatti">
+  <div class="container">
+    <div class="cta-box reveal">
+      <p class="eyebrow">Contattaci</p>
+      <h2 id="h-contatti">Hai un problema col computer?</h2>
+      <p>Chiamaci per una diagnosi immediata o vieni a trovarci a Roma Est. Rispondiamo in giornata, anche per le emergenze.</p>
+      <div class="cta-actions">
+        <a class="btn btn-cta" href="tel:+390640501519">
+          <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+          +39 06 4050 1519
+        </a>
+        <a class="btn btn-ghost" href="https://maps.google.com/?q=41.9128656,12.5736505" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 11-8 11s-8-5-8-11a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+          Via Edoardo D'Onofrio 154, Roma
+        </a>
+      </div>
+      <p class="zone">Zone servite: Casal de' Pazzi, Ponte Mammolo, Rebibbia, San Basilio, Colli Aniene, Tiburtino e tutta l'area di Roma Est.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="foot">
+      <span class="logo">
+        <span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19 12 5l8 14"/><path d="M8.5 14h7"/></svg></span>
+        AM Technology
+      </span>
+      <address class="contact-row" style="font-style:normal">
+        <a href="tel:+390640501519">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+          +39 06 4050 1519
+        </a>
+        <a href="https://maps.google.com/?q=41.9128656,12.5736505" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 11-8 11s-8-5-8-11a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+          Via Edoardo D'Onofrio 154, Roma
+        </a>
+      </address>
+    </div>
+    <p class="copy">© 2026 AM Technology — Assistenza informatica e riparazione computer a Roma Est</p>
+  </div>
+</footer>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ComputerStore",
+  "name":"AM Technology",
+  "description":"Riparazione computer, recupero dati e assistenza IT per privati e aziende a Roma Est.",
+  "telephone":"+390640501519",
+  "image":"",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Via Edoardo D'Onofrio 154",
+    "addressLocality":"Roma",
+    "addressRegion":"RM",
+    "addressCountry":"IT"
+  },
+  "geo":{"@type":"GeoCoordinates","latitude":41.9128656,"longitude":12.5736505},
+  "hasMap":"https://maps.google.com/?q=41.9128656,12.5736505",
+  "areaServed":{"@type":"Place","name":"Roma Est"}
+}
+</script>
+<script>
+(function(){
+  // mobile nav
+  var burger=document.querySelector('.burger'),links=document.getElementById('nav-links');
+  function close(){links.classList.remove('open');burger.setAttribute('aria-expanded','false');burger.setAttribute('aria-label','Apri il menu')}
+  if(burger&&links){
+    burger.addEventListener('click',function(){
+      var open=links.classList.toggle('open');
+      burger.setAttribute('aria-expanded',String(open));
+      burger.setAttribute('aria-label',open?'Chiudi il menu':'Apri il menu');
+    });
+    links.addEventListener('click',function(e){if(e.target.tagName==='A')close()});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+    addEventListener('resize',function(){if(innerWidth>820)close()});
+  }
+
+  // reveal on scroll
+  var items=document.querySelectorAll('.reveal');
+  if(!document.documentElement.classList.contains('js')||!('IntersectionObserver' in window)){
+    for(var i=0;i<items.length;i++)items[i].classList.add('in');
+    return;
+  }
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}
+    });
+  },{rootMargin:'0px 0px -8% 0px',threshold:.08});
+  items.forEach(function(el,i){el.style.transitionDelay=(i%4)*70+'ms';io.observe(el)});
+  // fail-safe: never leave content hidden if the observer never fires
+  setTimeout(function(){for(var j=0;j<items.length;j++)items[j].classList.add('in')},2500);
+})();
+</script>
+</body>
+</html>
